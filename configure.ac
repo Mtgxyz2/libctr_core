@@ -25,8 +25,6 @@ AC_TYPE_UINT8_T
 
 AC_CHECK_FUNCS([malloc memmove memset strchr strtol])
 
-AX_CHECK_COMPILE_FLAG(-Wno-declaration-after-statement,
-	[WARN_CFLAGS="$WARN_CFLAGS -Wno-declaration-after-statement -Wno-error=declaration-after-statement"], [], [], [])
 
 AC_ARG_ENABLE(3ds-arm11,
 	AS_HELP_STRING([--enable-3ds-arm11],
