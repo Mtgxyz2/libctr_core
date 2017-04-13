@@ -34,13 +34,13 @@ AX_COMPILER_FLAGS(,,,[-Wpedantic -Wall -Wextra -Wcast-align -Wcast-qual\
 AX_CHECK_COMPILE_FLAG(-Wno-declaration-after-statement,
 	[WARN_CFLAGS="$WARN_CFLAGS -Wno-declaration-after-statement -Wno-error=declaration-after-statement"], [], [], [])
 
-AX_GCC_ARCHFLAG([no],
-	[
-		MACHINE_CFLAGS="$ax_cv_gcc_archflag"
-		AC_SUBST(MACHINE_CFLAGS)
-	] , [AC_MSG_ERROR([configure was unable to identify the\
- architecture being targeted. Please specify the architecture via the\
- --with-gcc-arch option.])])
+#AX_GCC_ARCHFLAG([no],
+#	[
+#		MACHINE_CFLAGS="$ax_cv_gcc_archflag"
+#		AC_SUBST(MACHINE_CFLAGS)
+#	] , [AC_MSG_ERROR([configure was unable to identify the\
+# architecture being targeted. Please specify the architecture via the\
+# --with-gcc-arch option.])])
 
 AC_ARG_ENABLE(3ds-arm11,
 	AS_HELP_STRING([--enable-3ds-arm11],
